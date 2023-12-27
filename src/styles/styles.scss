@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'firacode';
+    src: url('../assets/fonts/FiraCode-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'firacode', monospace;
+    background-color: #000000;
+    margin: 0;
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+}
+
+.border {
+    border: 1px solid #ffffff;
+    padding: 0.625rem;
+    width: 37.5rem;
+    height: 25rem;
+}
+
+// Text
+.green {
+    color: #01E045;
+}
+.blue {
+    color: #144cb4;
+}
+.white {
+    color: #ffffff;
+}
+
+#input {
+    border: none;
+}
+#input:focus {
+    outline: none;
+    // caret-shape: TBD
+    color: #ffffff;
+}
