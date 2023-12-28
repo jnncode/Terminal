@@ -1,12 +1,24 @@
 <main class="container">
+  <p id="info">Welcome to jnncode.media Terminal!
+    <br />Click on the left upper corner and type 'help' to begin.
+  </p>
   <div class="border">
-      <!-- The arrow should generate each time user presses enter or some command -->
-    <div class="green">user&#64;jnncode.media<span class="white">:</span><span class="blue">~</span><span class="white">$</span><span>&nbsp;</span>
-      <input type="text" id="input" maxLength="15" minlength="1" size="40" placeholder="type 'help' to list available commands" />
+    <div id="input-container">
+      <div [ngClass]="userColorClasses.join(' ')">
+        <input type="text" class="input" (keyup.enter)="handleInput($event)" maxLength="15" minlength="1" size="40" />
+      </div>
+    </div>
+    <div id="output-container">
+      <div id="user-command-container"></div>
+      <div id="command-list">
+        <div *ngIf="showCommands">
+          <div *ngFor="let command of commands">
+            {{ command }}
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
-    <!-- Blinking 'cursor' -->
 </main>
 <div class="footer">
   <app-footer></app-footer>
