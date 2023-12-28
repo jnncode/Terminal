@@ -6,3 +6,4 @@ An interactive web application mimicking a Linux terminal interface.
 ### Learning Outcome
 
 ### Stack
+Angular, HTML, SCSS, TypeScript
